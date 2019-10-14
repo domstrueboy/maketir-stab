@@ -1,0 +1,21 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+}
+header {
+    height: 100px;
+    background: #104297;
+    display: flex;
+}
+.logo {
+    height: 100%;
+}
+.tiles__list {
+    display: flex;
+}
+.tile {
+    list-style: none;
+}
+.tile__img {
+    max-height: 200px;
+}
