@@ -1,6 +1,7 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
+    min-width: 320px;
 }
 ul {
     margin: 0;
@@ -13,33 +14,37 @@ a:hover {
     transform: scale(1.01);
     transition: .1s;
 }
-:root {
-    --header-height: 122px;
-    --footer-height: 50px;
-}
 header {
-    height: var(--header-height);
     background: #0F49AA;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 main {
-    min-height: calc(100vh - var(--header-height) - var(--footer-height));
     background: #AAC1D5;
     padding: 20px;
 }
 footer {
-    height: var(--footer-height);
     background: #0F49AA;
+    padding: 10px;
+}
+footer > div {
+    color: white;
+    font-size: 14px;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
+    margin-top: 10px;
+    text-align: center;
+}
+.header-wrapper {
     display: flex;
+    flex-grow: 1;
     align-items: center;
-    padding: 0 10px;
 }
 .title-wrapper {
     margin: 0 auto;
     font-weight: bold;
     color: white;
-    padding: 16px 120px;
+    padding: 16px;
     text-align: center;
 }
 .title {
@@ -62,17 +67,21 @@ footer {
     text-shadow: 10px 5px 5px black;
 }
 .logo {
-    height: 100%;
+    max-height: 140px;
 }
 .tiles__list {
     display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
+    overflow-x: scroll;
 }
 .tile {
     list-style: none;
     background: rgb(157, 178, 196);
     box-shadow: 10px 5px 5px rgba(0, 0, 0, .5);
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.tile:not(:first-child) {
+    margin-left: 15px;
 }
 .tile__img {
     max-height: 200px;
@@ -86,23 +95,23 @@ footer {
 }
 .under-construction {
     color: white;
-    font-size: 36px;
-    padding: 50px;
+    font-size: 5vw;
+    padding: 5vw;
     background: #0F49AA;
     text-align: center;
-    margin-bottom: 36px;
+    margin-bottom: 4vw;
     position: relative;
     overflow: hidden;
 }
 .under-construction__info {
-    margin-bottom: 36px;
+    margin-bottom: 4vw;
     text-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
 }
 .under-construction__link {
     display: block;
     background: #666FB0;
     text-decoration: none;
-    padding: 36px;
+    padding: 4vw;
     text-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
     box-shadow: 3px 5px 5px rgba(0, 0, 0, .5);
 }
@@ -128,8 +137,6 @@ footer {
 .social-links {
     list-style-type: none;
     display: flex;
-    align-items: center;
-    height: 100%;
 }
 .social-item {
     margin-right: 10px;
@@ -139,10 +146,4 @@ footer {
 }
 .social-image {
     height: 40px;
-}
-.success {
-    color: white;
-    margin-left: auto;
-    font-size: 14px;
-    text-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
 }
