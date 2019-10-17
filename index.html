@@ -6,14 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>МАКЕТиР</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        a { /* a hack for iPhone */
+            color: white;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="header-wrapper">
-            <img
-                class="logo"
-                src="img/logo.jpg"
-            >
+            <picture class="logo">
+                <source srcset="img/logo.webp" type="image/webp">
+                <source srcset="img/logo.jpg" type="image/jpeg"> 
+                <img class="logo" src="img/logo.jpg">
+            </picture>
             <div class="title-wrapper">
                 <div class="title">
                     ООО МАКЕТиР
@@ -33,19 +40,31 @@
         <section class="tiles">
             <ul class="tiles__list">
                 <li class="tile">
-                    <img src="img/1.jpg" alt="" class="tile__img">
+                    <picture class="tile__img">
+                        <source srcset="img/1.webp" type="image/webp">
+                        <source srcset="img/1.jpg" type="image/jpeg"> 
+                        <img class="tile__img" src="img/1.jpg">
+                    </picture>
                     <div class="tile__title">
                         3D-услуги
                     </div>
                 </li>
                 <li class="tile">
-                    <img src="img/2.jpg" alt="" class="tile__img">
+                    <picture class="tile__img">
+                        <source srcset="img/2.webp" type="image/webp">
+                        <source srcset="img/2.jpg" type="image/jpeg"> 
+                        <img class="tile__img" src="img/2.jpg">
+                    </picture>
                     <div class="tile__title">
                         3D-оборудование
                     </div>
                 </li>
                 <li class="tile">
-                    <img src="img/3.jpg" alt="" class="tile__img">
+                    <picture class="tile__img">
+                        <source srcset="img/3.webp" type="image/webp">
+                        <source srcset="img/3.jpg" type="image/jpeg"> 
+                        <img class="tile__img" src="img/3.jpg">
+                    </picture>
                     <div class="tile__title">
                          Голографические<br>дисплеи
                     </div>

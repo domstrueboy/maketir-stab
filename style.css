@@ -7,13 +7,17 @@ ul {
     margin: 0;
     padding: 0;
 }
-img {
+img, picture {
     display: block;
 }
 a:hover {
     transform: scale(1.01);
     transition: .1s;
 }
+a[x-apple-data-detectors] {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
 header {
     background: #0F49AA;
     display: flex;
@@ -97,6 +101,7 @@ footer > div {
     color: white;
     font-size: 5vw;
     padding: 5vw;
+    padding-bottom: 70px;
     background: #0F49AA;
     text-align: center;
     margin-bottom: 4vw;
